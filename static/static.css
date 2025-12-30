@@ -1,0 +1,10 @@
+body {
+    background-color: beige;
+}
+
+.notes-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    margin-top: 20px;
+}
