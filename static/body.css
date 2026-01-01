@@ -1,4 +1,4 @@
-.body {
+.body-whole {
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: start;
@@ -56,4 +56,13 @@
 
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.input {
+    width: 500px;
+}
+
+.notes {
+    width: 500px;
+    height: auto;
 }

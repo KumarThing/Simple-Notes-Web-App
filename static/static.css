@@ -1,6 +1,4 @@
-body {
-    background-color: beige;
-}
+
 
 .notes-display {
     display: flex;
@@ -8,3 +6,6 @@ body {
     align-items: center;   
     margin-top: 20px;
 }
+
+
+
