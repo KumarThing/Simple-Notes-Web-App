@@ -28,14 +28,14 @@
 
     </div>
 
-    <div class="body">
+    <div class="body-whole">
 
         <div class="left-side">
             <h2>Action</h2>
            
 
             <form action="/show-note" method="post">
-                <button type="submit" class="show">Show Notes</button>
+                <button type="submit" class="show">Edit Notes</button>
             </form>
         </div>
 
@@ -52,16 +52,18 @@
 
             </div>
 
+        <div class="notes-form">
+
             <form action="/add-note" method="post">
                 
-                <div class="notes-form">
+               
                     <input type="text" class="input" name="title" placeholder="Title" required>
                     <textarea placeholder="Notes" class="notes" name="note" required></textarea>
                     <button type="submit" class="add">Add</button>
-                </div>
+                
                 
             </form>
-
+        </div>
 
         </div>
     </div>
@@ -72,8 +74,11 @@
 
         {{range .}}
         <div class="note-item">
-            <h3>Title: {{.Title}}</h3>
+            <h3> Title: {{.Title}}</h3>
             <p>Note: {{.Note}}</p>
+            
+            
+        
         </div>
         <hr>
 

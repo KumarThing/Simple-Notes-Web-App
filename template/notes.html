@@ -8,60 +8,9 @@
     <link rel="stylesheet" href="/static/static.css">
     <link rel="stylesheet" href="/static/header.css">
     <link rel="stylesheet" href="/static/body.css">
-    <style>
-        body {
-            background-color: beige;
-            font-family: Arial, sans-serif;
-        }
-
-        .saved-notes {
-            max-width: 600px;
-            margin: 50px auto;
-            text-align: center;
-        }
-
-        .note-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .note-text {
-            text-align: left;
-        }
-
-        .delete-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .delete-btn:hover {
-            background-color: darkred;
-        }
-
-        a.back-home {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #333;
-            padding: 8px 15px;
-            border: 1px solid #333;
-            border-radius: 5px;
-        }
-
-        a.back-home:hover {
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/notes.css">
+    
+       
 </head>
 <body>
     <div class="saved-notes">
@@ -70,12 +19,12 @@
        
         {{range .}}
 
-        <h2>Title: {{.Title}}</h2>
+        <h2> Title: {{.Title}}</h2>
         <p>Note: {{.Note}}</p>
         
-        <form action="/delete" method="post" style="display: inline;">
-            <input name="id" value="{{.ID}}">
-            <button type="submit" class="delete-btn">Delete</button>
+        <form action="/delete" method="post">
+            <input type="hidden" name="id" value="{{.Id}}">
+            <button type="submit" style="display: inline;">Delete</button>
         </form>
         
         <hr>
